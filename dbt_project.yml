@@ -3,7 +3,7 @@ name: 'jaffle_shop'
 config-version: 2
 version: '0.1'
 
-profile: 'jaffle_shop'
+profile: 'snowflake'
 
 model-paths: ["models"]
 seed-paths: ["seeds"]
@@ -22,5 +22,6 @@ require-dbt-version: [">=1.0.0", "<2.0.0"]
 models:
   jaffle_shop:
       materialized: table
-      staging:
-        materialized: view
+
+seeds:
+  quote_columns: true
